@@ -1,0 +1,7 @@
+<h1 *ngIf="visible">Directives</h1>
+<button (click)="toggle()">Toggle</button>
+
+<ul *ngIf="visible">
+  <!-- or [hidden]="visible" -->
+  <li *ngFor="let user of users">{{ user }}</li>
+</ul>

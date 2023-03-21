@@ -9,14 +9,12 @@ export class NativeEventsComponent implements OnInit {
   @ViewChild("main") main!: ElementRef;
   a = 1;
 
-  constructor() {
-
-  }
+  constructor() {}
 
   ngOnInit(): void {
     setTimeout(() => {
       if (this.main != undefined)  {
-        this.main.nativeElement.innerHTML = 'Hello World'
+        this.main.nativeElement.innerHTML = 'Native Events Component'
       }
     }, 200);
 
