@@ -11,9 +11,11 @@ export class HttpRequestComponent {
   users: Users[] = [];
 
   constructor(private http: HttpClient){
-    http.get<Users[]>('https://jsonplaceholder.typicode.com/users')
-    .subscribe(res => {
-      this.users = res;
-    })
+    setTimeout(() => {
+      http.get<Users[]>('https://jsonplaceholder.typicode.com/users')
+      .subscribe(res => {
+        this.users = res;
+      })
+    }, 2000);
   }
 }

@@ -1,7 +1,17 @@
 <h1 class="mt-4 mb-4">http-request</h1>
 
-<!-- <pre>{{ users| json}}</pre> -->
+<div *ngIf="!users; else success">LOADING</div>
+<ng-template #success>SUCCESS DOWNLOADED
+  <div *ngIf="true">
+    <li *ngFor="let user of users">
+      <p><b>{{ user.id }} - {{ user.name }}</b></p>
+      City: {{ user.address?.city }}
+      Street: {{ user.address?.street }}
+    </li>
+  </div>
+</ng-template>
 
-<li *ngFor="let user of users">
+<!-- <pre *ngIf="true">{{users | json}}</pre> -->
+<!-- <li *ngFor="let user of users">
   {{ user.id }} - {{ user.name }}
-</li>
+</li> -->
