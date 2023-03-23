@@ -8,6 +8,8 @@ import { DirectivesComponent } from './components/directives/directives.componen
 import { PipeComponent } from './components/pipe/pipe.component';
 import { TruncatePipe } from './components/pipe/truncatePipe';
 import { InterfacesComponent } from './components/interfaces/interfaces.component';
+import { HttpRequestComponent } from './components/http-request/http-request.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { InterfacesComponent } from './components/interfaces/interfaces.componen
     DirectivesComponent,
     PipeComponent,
     TruncatePipe,
-    InterfacesComponent
+    InterfacesComponent,
+    HttpRequestComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
