@@ -1,0 +1,12 @@
+<h1 class="mt-4 mb-4">Pipes</h1>
+<div>{{today|date: 'dd MM yy'}}</div>
+<div>{{money|currency: '€ '}}</div>
+<div>{{bitcoins|number: '1.2-4'}}</div>
+<pre>{{Json|json}}</pre>
+
+<h2 class="mt-3 mb-3">Pipe Truncate</h2>
+<li *ngFor="let art of article">
+  <h3>{{art.title}}</h3>
+  <i>{{art.author}}</i>
+  <p>{{art.text | truncate: 100}}</p>
+</li>

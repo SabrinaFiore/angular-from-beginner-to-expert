@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NativeEventsComponent } from './components/nativeEvents/native-events.component';
 import { DirectivesComponent } from './components/directives/directives.component';
+import { PipeComponent } from './components/pipe/pipe.component';
+import { TruncatePipe } from './components/pipe/truncatePipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NativeEventsComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    PipeComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
