@@ -7,6 +7,7 @@ import { NativeEventsComponent } from './components/nativeEvents/native-events.c
 import { DirectivesComponent } from './components/directives/directives.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { TruncatePipe } from './components/pipe/truncatePipe';
+import { InterfacesComponent } from './components/interfaces/interfaces.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TruncatePipe } from './components/pipe/truncatePipe';
     NativeEventsComponent,
     DirectivesComponent,
     PipeComponent,
-    TruncatePipe
+    TruncatePipe,
+    InterfacesComponent
   ],
   imports: [
     BrowserModule,
