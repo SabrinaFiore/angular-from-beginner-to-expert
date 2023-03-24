@@ -1,6 +1,6 @@
 <h1 *ngIf="visible" class="mt-4 mb-4">Directives</h1>
 <div class="mt-2"></div>
-<button (click)="toggle()">Toggle</button>
+<button (click)="toggle()" class="btn btn-light">Toggle</button>
 
 <ul *ngIf="visible">
   <!-- or [hidden]="visible" -->
@@ -9,6 +9,6 @@
 
 
 <h1 *ngIf="visible" class="mt-4 mb-4">Attributes and Brackets</h1>
-<button [disabled]="url" (click)="load()">ADD</button>
-<button [disabled]="!url" (click)="onLoad()">REMOVE</button>
+<button [disabled]="url" (click)="load()" class="btn btn-light me-3">ADD</button>
+<button [disabled]="!url" (click)="onLoad()" class="btn btn-light">REMOVE</button>
 <img *ngIf="url" [src]="url" alt="angular_logo" width="200px">

@@ -3,10 +3,13 @@
 <div *ngIf="!users; else success">LOADING</div>
 <ng-template #success>SUCCESS DOWNLOADED
   <div *ngIf="true">
-    <li *ngFor="let user of users">
+    <li *ngFor="let user of users; let i = index; let odd = odd; let last = last">
       <p><b>{{ user.id }} - {{ user.name }}</b></p>
       City: {{ user.address?.city }}
       Street: {{ user.address?.street }}
+      <button (click)="delete(user)" class="btn btn-light">DELETE ITEM</button>
+      <hr *ngIf="odd">
+      <p *ngIf="last">END OF FILE</p>
     </li>
   </div>
 </ng-template>

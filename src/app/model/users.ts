@@ -1,8 +1,8 @@
 // Transform JSON in interface https://transform.tools/json-to-typescript
 
-export interface Users {
-  id: number
-  name: string
+export interface User {
+  id?: number
+  name?: string
   age?: number
   username?: string
   email?: string

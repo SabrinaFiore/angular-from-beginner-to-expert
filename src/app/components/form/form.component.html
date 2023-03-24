@@ -1,0 +1,36 @@
+<h1 class="mt-4 mb-4">Form</h1>
+
+<!-- E' SCONSIGLIATO L'APPROCCIO BISIMENSIONALE AL FORM PERCHE POTREBBE CAUSARE
+  UN PROBLEMA DI COORDINAMENTO DATI - SOPRATTUTTO SE PROVIENE DA UN ALTRO COMPONENTE
+  [(ngModel)]="label"
+
+  #formRef = TEMPLATE REFERENCE VARIABLE -->
+
+  <form #formRef="ngForm" (submit)="add(formRef)">
+    <input
+      type="text"
+      name="id"
+      placeholder="Add user id..."
+      class="me-3"
+      [ngModel]="user.id"
+    >
+    <input
+      type="text"
+      name="name"
+      placeholder="Add user..."
+      class="me-3"
+      [ngModel]="user.name"
+    >
+    <input
+      type="text"
+      name="age"
+      placeholder="Add user..."
+      class="me-3"
+      [ngModel]="user.age"
+    >
+    <button type="submit" class="btn btn-light m-3">ADD</button>
+    <li *ngFor="let user of users">{{user.id}} - {{user.name}} age: {{user.age}} </li>
+    </form>
+
+<!-- <small *ngIf="name.length < 3">To short!</small> -->
+<!-- <button (click)="add(inputRef)" class="btn btn-light">ADD ITEM</button> -->

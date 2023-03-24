@@ -1,5 +1,5 @@
 import { UtilityService } from 'src/app/service/utility.service';
-import { Users } from './../../model/users';
+import { User } from './../../model/users';
 import { Component } from '@angular/core';
 
 @Component({
@@ -16,7 +16,7 @@ export class InterfacesComponent {
     console.log("[debug] print util.add",  util.add(5, 6))
   }
 
-  users: Users[] = [
+  users: User[] = [
     {id: 1, name: 'Anna', age: 64},
     {id: 2, name: 'Sab'},
     {id: 3, name: 'Laura', age: 27},
